@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care - HAAN</title>
+    <link rel="icon" href="https://cdn.shopify.com/s/files/1/0511/9066/1293/files/favicon-haan_32x32.png?v=1613714759" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/adb97210e8.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        #products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .title_Euro {
+            text-align: center;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #skinCareImage {
+            /* width: 300px; */
+            /* top: -100px; */
+            /* left: 50%; */
+            /* transform: translateX(-50%); */
+            /* z-index: -1; */
+            width: 100%;
+            height: 440px;
+            /* position: relative; */
+        }
+
+        .imageContainer {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #product_image {
+            /* width: 100%; */
+            /* height: 360px; */
+            width: 290px;
+            height: 300px;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        .wishlistDiv {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 3%;
+            left: 84%;
+        }
+
+        .wishlistHeart {
+            width: 25px;
+            height: 25px;
+        }
+
+        #shopingBagDiv {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 65%;
+            left: 84%;
+        }
+
+
+        #shoping_bag {
+            width: 25px;
+            height: 25px;
+            opacity: 0;
+        }
+
+        .imageContainer:hover #shoping_bag {
+            opacity: 1;
+        }
+
+        #imgPart-1 {
+            position: relative;
+            /* top: 0;
+            left: 0; */
+        }
+
+        #imgPart-2 {
+            position: absolute;
+            top: 27%;
+            left: 10%;
+            color: aliceblue;
+        }
+
+        #imageDownText {
+            margin-top: -10px;
+            display: flex;
+            /* height: 40px; */
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            /* vertical-align: bottom; */
+            background-color: #c1ddc6;
+        }
+
+        .arrow {
+            border: solid black;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 2px;
+        }
+
+        .arrow {
+            /* margin-top: -5px; */
+            margin-bottom: 3px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+        }
+
+        #sortBy {
+            display: flex;
+            gap: 7px;
+        }
+
+        #filter_Sorting {
+            /* width: 40px; */
+            height: 50px;
+            margin: 5px 0 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #filterPart {
+            display: flex;
+            gap: 10px;
+        }
+
+        #filterIcon {
+            margin-top: 2px;
+        }
+
+        #mainProductContainer {
+            margin: 0 40px 0 40px;
+        }
+
+        #filterContent {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #filterHumberger {
+            display: flex;
+            display: none;
+        }
+
+        #filterHumberger.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #filterBtnDiv {
+            display: flex;
+            justify-content: center;
+        }
+
+        #filterBtn {
+            width: 8%;
+            border-radius: 10px;
+        }
+
+        #search-inp {
+            /* margin-top: -30px; */
+            height: 26px;
+            width: 70%;
+            border-radius: 10px 0 0 10px;
+            /* background-color: #121212; */
+            border: 0.5px solid grey;
+            border-right: none;
+            /* color: white; */
+        }
+
+        #search-btn {
+            /* margin-top: -30px; */
+            margin-left: -4px;
+            /* margin-top: 70px; */
+            height: 30px;
+            width: 14%;
+            border-radius: 0 10px 10px 0;
+            /* background-color: #232221; */
+            border: 0.5px solid grey;
+            border-left: none;
+        }
+
+        #sortHumberger {
+            display: flex;
+            display: none;
+        }
+
+        #sortContent {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #sortHumberger.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #sortBtnDiv {
+            display: flex;
+            justify-content: center;
+        }
+
+        #sortBtn {
+            width: 8%;
+            border-radius: 10px;
+        }
+
+        .hidden {
+            /* opacity: 0;                         for hidding shopping bag after click */
+            /* display: none; */
+            /* opacity: 0; */
+            width: 0px;
+            height: 45px;
+            background-color: aliceblue;
+            right: 4;
+            display: none;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .page-link {
+            padding: 8px 12px;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+        }
+
+        p {
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+        }
+
+        span {
+            font-family: 'Signika', sans-serif;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Signika', sans-serif;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+        }
+
+        h3 {
+            font-family: 'Dancing Script', cursive;
+            font-family: 'Signika', sans-serif;
+            font-family: 'Yanone Kaffeesatz', sans-serif;
+        }
+
+        .pagination {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 540px) {
+
+            /* #nav{
+                display: none;
+            }
+            #footer{
+                display: none;
+            } */
+            /* #imgPart-2{
+                top: 37%;
+            } */
+            #skinCareImage {
+                /* width: 300px; */
+                /* top: -100px; */
+                /* left: 50%; */
+                /* transform: translateX(-50%); */
+                /* z-index: -1; */
+                width: 100%;
+                height: 220px;
+                /* position: relative; */
+            }
+
+            #imgPart-2 {
+                width: 40%;
+            }
+
+            #filter_Sorting {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 30px;
+            }
+
+            #products {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            #product_image {
+                /* width: 100%; */
+                /* height: 360px; */
+                width: 155px;
+                height: 155px;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+
+            .wishlistHeart {
+                width: 20px;
+                height: 20px;
+            }
+
+            .wishlistDiv {
+                /* width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 3%; */
+                left: 80%;
+            }
+
+            #shopingBagDiv {
+                /* width: 30px;
+            height: 30px;
+            position: absolute; */
+                top: 43%;
+                left: 80%;
+            }
+
+            button {
+                margin-bottom: 10px;
+            }
+
+            .pagination {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 740px) {
+            #skinCareImage {
+                /* width: 300px; */
+                /* top: -100px; */
+                /* left: 50%; */
+                /* transform: translateX(-50%); */
+                /* z-index: -1; */
+                width: 100%;
+                height: 220px;
+                /* position: relative; */
+            }
+
+            #imgPart-2 {
+                top: 10%;
+                width: 40%;
+            }
+
+            #filter_Sorting {
+                display: flex;
+                /* flex-direction: column; */
+                margin-bottom: 30px;
+            }
+
+            #products {
+                margin-top: 10px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            #product_image {
+                /* width: 100%; */
+                /* height: 360px; */
+                width: 155px;
+                height: 155px;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+
+            .wishlistHeart {
+                width: 20px;
+                height: 20px;
+            }
+
+            .wishlistDiv {
+                /* width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 3%; */
+                left: 80%;
+            }
+
+            #shopingBagDiv {
+                /* width: 30px;
+            height: 30px;
+            position: absolute; */
+                top: 43%;
+                left: 80%;
+            }
+
+            .pagination {
+                margin-bottom: 20px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="nav">
+            <header class="header">
+                <nav class="navbar">
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="nav-menu">
+                        <li class="nav-items">
+                            <a href="#" class="nav-links"><i class="fa-solid fa-bars"></i></a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#bestseller" class="nav-links">Best Sellers</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Hand Sanitizer</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Hand Cream</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Refills</a>
+                        </li>
+                        <li class="nav-items">
+                            <img id="logo-image" src="https://cdn.shopify.com/s/files/1/0511/9066/1293/files/logo_han.png?v=1651046048" alt="" />
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Toothpaste</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Hand Soap</a>
+                        </li>
+                        <li class="nav-items">
+                            <a href="#" class="nav-links">Combos</a>
+                        </li>
+                    </ul>
+        
+                    <a class='nav-links logini' href='#'><i class="fa-regular fa-user"></i></a>
+                    <a class='nav-links' href='#'><i class="fa-solid fa-bag-shopping"></i></a>
+                </nav>
+            </header>
+        </div>
+        <div id="container">
+            <p>Home > <span>Skin Care</span></p>
+            <div id="mainImage">
+                <!-- <a href="https://www.flaticon.com/free-icons/heart" title="heart icons">Heart icons created by Freepik - Flaticon</a> -->
+                <div id="imgPart-1">
+                    <img src="//haanready.com/cdn/shop/files/handcare.jpg?v=1661872588" id="skinCareImage" alt="">
+                </div>
+                <div id="imgPart-2">
+                    <h1>Hand Care</h1>
+                    <h3>Elevate your hand care game</h3>
+                </div>
+                <div id="imageDownText">
+                    <p>
+                        Lift Up your Journey: <span>Natural essentials for your daily adventures</span>
+                    </p>
+                </div>
+            </div>
+            <div id="mainProductContainer">
+                <div id="filter_Sorting">
+                    <div id="filterPart">Filter
+                        <div id="filterIcon">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.8 3.2H3.348C3.6792 4.1288 4.5584 4.8 5.6 4.8C6.6416 4.8 7.5208 4.1288 7.852 3.2H15.2C15.6424 3.2 16 2.8424 16 2.4C16 1.9576 15.6424 1.6 15.2 1.6H7.852C7.5208 0.6712 6.6416 0 5.6 0C4.5584 0 3.6792 0.6712 3.348 1.6H0.8C0.3576 1.6 0 1.9576 0 2.4C0 2.8424 0.3576 3.2 0.8 3.2ZM15.2 12.8H7.852C7.5208 11.8712 6.6416 11.2 5.6 11.2C4.5584 11.2 3.6792 11.8712 3.348 12.8H0.8C0.3576 12.8 0 13.1576 0 13.6C0 14.0424 0.3576 14.4 0.8 14.4H3.348C3.6792 15.3288 4.5584 16 5.6 16C6.6416 16 7.5208 15.3288 7.852 14.4H15.2C15.6424 14.4 16 14.0424 16 13.6C16 13.1576 15.6424 12.8 15.2 12.8ZM15.2 7.2H12.652C12.3208 6.2712 11.4416 5.6 10.4 5.6C9.3584 5.6 8.4792 6.2712 8.148 7.2H0.8C0.3576 7.2 0 7.5576 0 8C0 8.4424 0.3576 8.8 0.8 8.8H8.148C8.4792 9.7288 9.3584 10.4 10.4 10.4C11.4416 10.4 12.3208 9.7288 12.652 8.8H15.2C15.6424 8.8 16 8.4424 16 8C16 7.5576 15.6424 7.2 15.2 7.2ZM5.6 1.6C6.0416 1.6 6.4 1.9584 6.4 2.4C6.4 2.8416 6.0416 3.2 5.6 3.2C5.1584 3.2 4.8 2.8416 4.8 2.4C4.8 1.9584 5.1584 1.6 5.6 1.6ZM5.6 14.4C5.1584 14.4 4.8 14.0416 4.8 13.6C4.8 13.1584 5.1584 12.8 5.6 12.8C6.0416 12.8 6.4 13.1584 6.4 13.6C6.4 14.0416 6.0416 14.4 5.6 14.4ZM10.4 8.8C9.9584 8.8 9.6 8.4416 9.6 8C9.6 7.5584 9.9584 7.2 10.4 7.2C10.8416 7.2 11.2 7.5584 11.2 8C11.2 8.4416 10.8416 8.8 10.4 8.8Z"
+                                    fill="#222222"></path>
+                                <mask id="mask0_8095:39389" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="16" height="16">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.8 3.2H3.348C3.6792 4.1288 4.5584 4.8 5.6 4.8C6.6416 4.8 7.5208 4.1288 7.852 3.2H15.2C15.6424 3.2 16 2.8424 16 2.4C16 1.9576 15.6424 1.6 15.2 1.6H7.852C7.5208 0.6712 6.6416 0 5.6 0C4.5584 0 3.6792 0.6712 3.348 1.6H0.8C0.3576 1.6 0 1.9576 0 2.4C0 2.8424 0.3576 3.2 0.8 3.2ZM15.2 12.8H7.852C7.5208 11.8712 6.6416 11.2 5.6 11.2C4.5584 11.2 3.6792 11.8712 3.348 12.8H0.8C0.3576 12.8 0 13.1576 0 13.6C0 14.0424 0.3576 14.4 0.8 14.4H3.348C3.6792 15.3288 4.5584 16 5.6 16C6.6416 16 7.5208 15.3288 7.852 14.4H15.2C15.6424 14.4 16 14.0424 16 13.6C16 13.1576 15.6424 12.8 15.2 12.8ZM15.2 7.2H12.652C12.3208 6.2712 11.4416 5.6 10.4 5.6C9.3584 5.6 8.4792 6.2712 8.148 7.2H0.8C0.3576 7.2 0 7.5576 0 8C0 8.4424 0.3576 8.8 0.8 8.8H8.148C8.4792 9.7288 9.3584 10.4 10.4 10.4C11.4416 10.4 12.3208 9.7288 12.652 8.8H15.2C15.6424 8.8 16 8.4424 16 8C16 7.5576 15.6424 7.2 15.2 7.2ZM5.6 1.6C6.0416 1.6 6.4 1.9584 6.4 2.4C6.4 2.8416 6.0416 3.2 5.6 3.2C5.1584 3.2 4.8 2.8416 4.8 2.4C4.8 1.9584 5.1584 1.6 5.6 1.6ZM5.6 14.4C5.1584 14.4 4.8 14.0416 4.8 13.6C4.8 13.1584 5.1584 12.8 5.6 12.8C6.0416 12.8 6.4 13.1584 6.4 13.6C6.4 14.0416 6.0416 14.4 5.6 14.4ZM10.4 8.8C9.9584 8.8 9.6 8.4416 9.6 8C9.6 7.5584 9.9584 7.2 10.4 7.2C10.8416 7.2 11.2 7.5584 11.2 8C11.2 8.4416 10.8416 8.8 10.4 8.8Z"
+                                        fill="white"></path>
+                                </mask>
+                                <g mask="url(#mask0_8095:39389)"></g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="text" id="search-inp" placeholder="Search" oninput="debounce()">
+                        <button id="search-btn"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" />
+                            </svg></button>
+                    </div>
+                    <div id="sortBy">Sort by
+                        <div>
+                            <i class="arrow down"></i>
+                        </div>
+                    </div>
+                    <!-- <hr> -->
+                </div>
+                <div id="filterHumberger">
+                    <div id="filterContent">
+                        <div>
+                            Category
+                            <div>
+                                <input type="radio" id="HandCleanser">Hand Cleanser (9)
+                            </div>
+                            <div>
+                                <input type="radio" id="HandCream">Hand Cream (9)
+                            </div>
+                            <div>
+                                <input type="radio" id="HandSerum">Hand Serum (9)
+                            </div>
+                            <div>
+                                <input type="radio" id="HandSPF">Hand SPF (1)
+                            </div>
+                            <div>
+                                <input type="radio" id="skinCare">Skin Care (3)
+                            </div>
+                        </div>
+                        <div>Product
+                            <div>
+                                <input type="radio" id="comboPack">Combo (12)
+                            </div>
+                        </div>
+                        <div>Size
+                            <div>
+                                <input type="radio" id="refilPack"> Refil (9)
+                            </div>
+                        </div>
+                        <div>Fragrance
+                            <div>
+                                <input type="radio" id="forestGrace"> Forest Grace (10)
+                            </div>
+                            <div>
+                                <input type="radio" id="morningGlory"> Morning Glory (11)
+                            </div>
+                            <div>
+                                <input type="radio" id="talesOfLotus"> Tales Of Lotus (10)
+                            </div>
+                        </div>
+                        <!-- <div>Price
+                            <div>
+                                €10 - €47
+                            </div>
+                        </div> -->
+                    </div>
+                    <div id="filterBtnDiv">
+                        <button id="filterBtn">Apply Filter</button>
+                    </div>
+                </div>
+                <div id="sortHumberger">
+                    <div id="sortContent">
+                        <div>
+                            Popularity
+                            <div>
+                                <input type="radio" id="relevence">Relevence
+                            </div>
+                            <div>
+                                <input type="radio" id="bestSelling">Bestselling
+                            </div>
+                        </div>
+                        <div>Price
+                            <div>
+                                <input type="radio" id="priceDescending">Price Descending
+                            </div>
+                            <div>
+                                <input type="radio" id="priceAscending">Price Ascending
+                            </div>
+                        </div>
+                        <div>Release Date
+                            <div>
+                                <input type="radio" id="dateDescending"> Created Descending
+                            </div>
+                            <div>
+                                <input type="radio" id="dateAscending"> Created Ascending
+                            </div>
+                        </div>
+                        <div>Fragrance
+                            <div>
+                                <input type="radio" id="aToz"> A - Z
+                            </div>
+                            <div>
+                                <input type="radio" id="zToa"> Z - A
+                            </div>
+                        </div>
+                    </div>
+                    <div id="sortBtnDiv">
+                        <button id="sortBtn">Apply Sort</button>
+                    </div>
+                </div>
+                <div id="products"></div>
+                <div class="pagination">
+                    <!-- <a href="#" class="page-link" id="prevPage">&laquo; Previous</a> -->
+                    <!-- <a href="#" class="page-link" id="nextPage">Next &raquo;</a> -->
+                    <button class="page-link active" id="prevPage">&laquo; Previous</button>
+                    <a href="#" class="page-link active" id="currPage">1</a>
+                    <button class="page-link" id="nextPage">Next &raquo;</button>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+
+        </div>
+</body>
+
+</html>
+<script>
+    function debounce() {
+        setTimeout(() => {
+            getData()
+        }, 100)
+    }
+    // document.getElementById("search-btn").addEventListener("click", getData)
+
+    // getData();
+    allDataShow()
+    async function allDataShow() {
+        try {
+            var searchInput = document.getElementById("search-inp").value;
+            // var searchInput = "cream"
+            var res = await fetch(`https://gifted-spacesuit-mite.cyclic.cloud/handCare?_page=${pageCount}&_limit=8`)
+            resData = await res.json();
+            showData(resData);
+        } catch (error) {
+            console.log(5);
+        }
+    }
+
+    let resData;
+    let shopingBagDiv;
+    let image2;
+
+    var prevPage = document.getElementById("prevPage");
+    prevPage.addEventListener("click", function () {
+        if (pageCount > 1) {
+            pageCount--;
+            nextPage.disabled = false
+            currPage.textContent = pageCount;
+        } else {
+            prevPage.disabled = true
+        }
+        allDataShow()
+    })
+    var currPage = document.getElementById("currPage");
+    var nextPage = document.getElementById("nextPage");
+    var pageCount = 1;
+    nextPage.addEventListener("click", function () {
+        if (pageCount == 4) {
+            nextPage.disabled = true
+        } else {
+            pageCount++;
+            prevPage.disabled = false;
+            currPage.textContent = pageCount;
+        }
+        allDataShow()
+    })
+    async function getData() {
+        try {
+            var searchInput = document.getElementById("search-inp").value;
+            // var searchInput = "cream"
+            var res = await fetch(`https://gifted-spacesuit-mite.cyclic.cloud/skinCare?_page=${pageCount}&_limit=8&q=${searchInput}`)
+            resData = await res.json();
+            showData(resData);
+        } catch (error) {
+            console.log(5);
+        }
+    }
+    async function showData(data) {
+        document.getElementById("products").innerHTML = "";
+
+        if (data.length === 0) {
+            var h1 = document.createElement("h1");
+            h1.textContent = "Apologies, but this product is currently out of stock."
+            document.getElementById("products").append(h1);
+        } else {
+
+            data.map((item) => {
+                var div = document.createElement("div");
+                div.setAttribute("class", "card");
+
+                // var icon = document.createElement()
+                var imageContainer = document.createElement("div");
+                div.setAttribute("class", "imageContainer");
+
+                var image = document.createElement("img")
+                image.setAttribute("src", item.image);
+                image.setAttribute("id", "product_image");
+                image.addEventListener("click", function () {
+                    detailData(item);
+                })
+
+
+                var wishlistDiv = document.createElement("div");
+                wishlistDiv.setAttribute("class", "wishlistDiv");
+                var image3 = document.createElement("img");
+                image3.setAttribute("src", "heart.png");
+                image3.setAttribute("class", "wishlistHeart")
+                image3.addEventListener("click", function () {
+                    // var obj = item;
+                    wishlistData(item)
+                    image3.setAttribute("src", "redHeart.png");
+                    // image2.style.color = "green";
+                })
+
+                shopingBagDiv = document.createElement("div");
+                shopingBagDiv.setAttribute("id", "shopingBagDiv")
+
+                image2 = document.createElement("img")
+                image2.setAttribute("src", "shopping-bag.png");
+                image2.setAttribute("id", "shoping_bag");
+                image2.addEventListener("click", function () {
+                    // var obj = item;
+                    // var idshop = document.getElementById("shoping_bag");
+                    // idshop.classList.add("hidden");
+                    div.style.display = "none";
+                    setTimeout(() => {
+                        div.style.display = 'block';
+                        // idshop.classList.remove("hidden");
+                        console.log("perfectWorking")
+                    }, 300);
+                    storeData(item)
+
+                    // image2.style.color = "green";
+                })
+
+                var p1 = document.createElement("p");
+                p1.textContent = item.title //"Full Skin Care Routine - for Normal to Combination Skin";
+                p1.setAttribute("class", "title_Euro")
+
+                var p2 = document.createElement("p");
+                p2.textContent = "₹ " + item.price // "46,70 €"
+                p2.setAttribute("class", "title_Euro")
+
+                var a = document.createElement("a");
+
+                wishlistDiv.append(image3)
+                shopingBagDiv.append(image2)
+                imageContainer.append(image, wishlistDiv, shopingBagDiv);
+                a.append(imageContainer)
+                div.append(a, p1, p2)
+                document.getElementById("products").append(div);
+            })
+        }
+    }
+    let arr = JSON.parse(localStorage.getItem('productArr')) || [];
+    let arr2 = JSON.parse(localStorage.getItem('wishlistArr')) || [];
+
+    function detailData(item) {
+        console.log(item);
+        localStorage.setItem('detailData', JSON.stringify(item));
+        setTimeout(() => {
+            location.href = "HaanSanitizer/productDetails.html";
+        }, 1000);
+    }
+
+    function wishlistData(item) {
+        console.log(item)
+        arr2.push(item);
+        localStorage.setItem('wishlistArr', JSON.stringify(arr2));
+        //     console.log("perfectWorking")
+    }
+
+    function storeData(item) {
+        console.log(item)
+        arr.push(item);
+        localStorage.setItem('productArr', JSON.stringify(arr));
+        //     image2.classList.add("hidden");
+        //     setTimeout(()=>{
+        //         // image2.style.display = 'none';
+        //         image2.classList.remove("hidden");
+        //             console.log("perfectWorking")
+        //     },10000);
+    }
+    const filterDiv = document.getElementById("filterPart");
+    const hiddenFilters = document.getElementById("filterHumberger");
+    filterDiv.addEventListener('click', function () {
+        this.classList.toggle('active');
+        hiddenFilters.classList.toggle('active');
+    });
+
+    const shortingDiv = document.getElementById("sortBy");
+    const hiddenShortings = document.getElementById("sortHumberger");
+    shortingDiv.addEventListener('click', function () {
+        this.classList.toggle('active');
+        hiddenShortings.classList.toggle('active');
+    });
+
+    var radioBtn = document.querySelectorAll('input[type="radio"]');
+    var previousBtn = {};
+
+    // radioBtn.forEach(btn => {
+    //     btn.addEventListener("click", () => {
+    //         if (previousBtn[btn.id] === btn.checked) {
+    //             btn.checked = !btn.checked;
+    //         }
+    //         previousBtn[btn.id] = btn.checked;
+    //     })
+    // })
+
+    let selectedRadio = null;
+
+    radioBtn.forEach(btn => {
+        btn.addEventListener("click", () => {
+            if (btn === selectedRadio) {
+                selectedRadio.checked = false;
+                selectedRadio = null;
+            } else {
+                if (selectedRadio) {
+                    selectedRadio.checked = false;
+                }
+                selectedRadio = btn;
+            }
+        });
+    });
+
+    document.getElementById("filterBtn").addEventListener("click", applyFilter);
+    var HandCleanser = document.getElementById("HandCleanser");
+    var HandCream = document.getElementById("HandCream");
+    var HandSerum = document.getElementById("HandSerum");
+    var HandSPF = document.getElementById("HandSPF");
+    var skinCare = document.getElementById("skinCare");
+    var comboPack = document.getElementById("comboPack");
+    var refilPack = document.getElementById("refilPack");
+    var forestGrace = document.getElementById("forestGrace");
+    var morningGlory = document.getElementById("morningGlory");
+    var talesOfLotus = document.getElementById("talesOfLotus");
+    function applyFilter() {
+        let count = 0;
+        if (HandCleanser.checked) {
+            count++;
+            // console.log(resData)
+            var filterData = resData.filter(data => {
+                const regex = /\bHand cleanser\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("cleanser")
+        }
+        if (HandCream.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bHand Cream\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("cream")
+        }
+        if (HandSerum.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bHand serum\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("serum")
+        }
+        if (HandSPF.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bHand SPF\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("spf")
+        }
+        if (skinCare.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bskin care\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("Skin Care")
+        }
+
+
+        if (comboPack.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bFull\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("Skin Care")
+        }
+        if (refilPack.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\brefill\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("Skin Care")
+        }
+        if (forestGrace.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bForest Grace\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("Skin Care")
+        }
+        if (morningGlory.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bMorning Glory\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("Skin Care")
+        }
+        if (talesOfLotus.checked) {
+            count++;
+            var filterData = resData.filter(data => {
+                const regex = /\bTales Of Lotus\b/i;
+                return regex.test(data.title);
+            })
+            showData(filterData);
+            // console.log("Skin Care")
+        }
+        if (count == 0) {
+            showData(resData);
+        }
+    }
+
+    document.getElementById("sortBtn").addEventListener("click", applySort);
+    var relevence = document.getElementById("relevence");
+    var bestSelling = document.getElementById("bestSelling");
+    var priceAscending = document.getElementById("priceAscending");
+    var priceDescending = document.getElementById("priceDescending");
+    var dateAscending = document.getElementById("dateAscending");
+    var dateDescending = document.getElementById("dateDescending");
+    var fragranceAscending = document.getElementById("aToz");
+    var fragranceDescending = document.getElementById("zToa");
+
+    function applySort() {
+        let sortCount = 0;
+        if (relevence.checked) {                        ///little bit similar to zToa
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                // return b.title - a.title;
+                return b.title.localeCompare(a.title)
+            })
+            showData(sortData);
+            console.log(sortData);
+        }
+        if (bestSelling.checked) {                     ///little bit similar to priceDescending
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                let priceA = parseFloat(a.price.replace(',', '.'));
+                let priceB = parseFloat(b.price.replace(',', '.'));
+                return priceB - priceA;
+                // if(pr>1500){
+                //     return pr;
+                // }
+            })
+            showData(sortData);
+            console.log(sortData);
+        }
+        if (priceAscending.checked) {
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                let priceA = parseFloat(a.price.replace(',', '.'));
+                let priceB = parseFloat(b.price.replace(',', '.'));
+                return priceA - priceB;
+                // if(pr>1500){
+                //     return pr;
+                // }
+            })
+            showData(sortData)
+            console.log(sortData);
+        }
+        if (priceDescending.checked) {
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                let priceA = parseFloat(a.price.replace(',', '.'));
+                let priceB = parseFloat(b.price.replace(',', '.'));
+                return priceB - priceA;
+                // if(pr>1500){
+                //     return pr;
+                // }
+            })
+            showData(sortData);
+            console.log(sortData);
+        }
+        if (dateAscending.checked) {
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                return new Date(b.Date) - new Date(a.Date);
+            })
+            showData(sortData);
+            console.log(sortData);
+        }
+        if (dateDescending.checked) {
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                return new Date(a.Date) - new Date(b.Date);
+            })
+            showData(sortData);
+            console.log(sortData);
+        }
+        if (fragranceAscending.checked) {
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                // return a.title - b.title;
+                return a.title.localeCompare(b.title);
+            })
+            showData(sortData);
+            console.log(sortData);
+        }
+        if (fragranceDescending.checked) {
+            sortCount++;
+            var sortData = resData.sort((a, b) => {
+                // return b.title - a.title;
+                return b.title.localeCompare(a.title)
+            })
+            showData(sortData);
+            console.log(sortData);
+        }
+        if (sortCount == 0) {
+            showData(resData);
+        }
+    }
+
+
+
+
+
+
+</script>

@@ -1,0 +1,105 @@
+
+  /* confirmation part */
+  /* #part1 {
+background-color: yellow;
+} */    
+#part1 > div {
+  margin: auto;
+  width: 50%;
+  /* border: solid black; */
+  padding: 10px;
+}
+#part3 > div {
+  margin: auto;
+  width: 50%;
+
+  padding: 10px;
+}
+#part3 {
+  height: 180px;
+  background-color: #f18a74;
+}
+#part3 h1 {
+  color: white;
+}
+#part2 {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 50%;
+  justify-content: center;
+  padding: 10px;
+}
+#part2 > div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+#part2 > div h3 {
+  /* background-color: #f18a74; */
+  color: white;
+  text-align: center;
+}
+#heding {
+  background-color: #f18a74;
+  border: solid 0.1px #f18a74;
+  border-radius: 8px;
+}
+#addressdiv{
+  width: 50%;
+  margin: auto;
+}
+#part2 #totalpricediv,#part2 #ordernodiv{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+  width: 80%;
+  margin: auto;
+}
+#part1 > div > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -50px;
+  width: 50%;
+}
+#parent{
+  margin-top: -2%;
+}
+
+#parent h1,#part1 p,
+#parent h3,#address,#timer{
+  text-align: center;
+}
+button {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.285);
+  border: none;
+  height: 50px;
+  align-items: center;
+  margin: auto;
+  border-radius: 6px;
+}
+button > h2 {
+  color: white;
+  
+}
+#shopagain:hover{
+  transform: scale(1.07);
+}
+/* #timer{
+  margin-top: -0.5%;
+  margin-bottom: -0.5%;
+} */
+/* button:hover {
+  background-color: #82b5d5;
+} */
+
+
+@media only screen and (max-width: 768px) {
+  #part2 {
+    display: flex;
+    flex-direction: column;
+  }
+}

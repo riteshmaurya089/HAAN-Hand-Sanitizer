@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <script src="https://kit.fontawesome.com/28b1c8118a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./details.css">
+  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="./navbar.css">
+  <script src="./details.js"></script>
+</head>
+
+<body>
+  <!-- navbar -->
+  <div id="main_nav">
+    <header class="header">
+      <nav class="navbar">
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-menu">
+          <li class="nav-items">
+            <a href="#" class="nav-links"><i class="fa-solid fa-bars"></i></a>
+          </li>
+          <li class="nav-items">
+            <a href="#bestseller" class="nav-links">Best Sellers</a>
+          </li>
+          <li class="nav-items">
+            <a href="#" class="nav-links">Hand Sanitizer</a>
+          </li>
+          <li class="nav-items">
+            <a href="#" class="nav-links">Hand Cream</a>
+          </li>
+          <li class="nav-items">
+            <a href="#" class="nav-links">Refills</a>
+          </li>
+          <li class="nav-items">
+            <img id="logo-image" src="https://cdn.shopify.com/s/files/1/0511/9066/1293/files/logo_han.png?v=1651046048"
+              alt="" />
+          </li>
+          <li class="nav-items">
+            <a href="#" class="nav-links">Toothpaste</a>
+          </li>
+          <li class="nav-items">
+            <a href="#" class="nav-links">Hand Soap</a>
+          </li>
+          <li class="nav-items">
+            <a href="#" class="nav-links">Combos</a>
+          </li>
+        </ul>
+
+        <a class='nav-links logini' href='#'><i class="fa-regular fa-user"></i></a>
+        <a class='nav-links' href='/cartpage/cartpage2/Hand-Sanitizer-website/cart.html'><i class="fa-solid fa-bag-shopping"></i></a>
+      </nav>
+    </header>
+  </div>
+  <br>
+
+  <div id="main_container">
+    <div class="left-container">
+      <div class="slide"></div>
+      <div id="price">
+        <div id="price_content">
+          <h3 id="detailTitle"></h3>
+          <h3 id="detailPrice"></h3>
+          <!-- <h1><a href=""><i class="fa-regular fa-heart"></i></a></h1> -->
+          <p style="margin-top: 20px;" id="p_installment">or 3 installments of
+            663 ₹
+            without interest. </p>
+          <a style="text-decoration: none;" href="">
+            <!-- <h3>scalapay</h3> -->
+          </a>
+          <div id="cartbtn">
+            <div class="container" style="margin-top: 12px;margin-left: -75px;">
+              <input type="button" onclick="decrementValue()" value="-" />
+              <input type="text" name="quantity" value="1" maxlength="2" max="10" size="1" id="number" />
+              <input type="button" onclick="incrementValue()" value="+" />
+            </div>
+            <div id="addtocart"><a style="color: white; text-decoration: none;">ADD TO CART</a></div>
+          </div>
+        </div>
+        <div id="right_container">
+          <!-- <h1 id="detailTitle">Face Cream SPF 30</h1> -->
+          <!-- <h1 id="detailPrice">1990 ₹</h1> -->
+          <div id="prod_details">
+
+            <p>A daily fast-absorbing moisturizer that hydrates the skin of your face while protecting it from the sun
+              and
+              pollution. With ingredients such as Hyaluronic Acid or Vitamin E, this Face Cream keeps skin hydrated,
+              improves
+              elasticity and delays premature aging. Its SPF30 filter makes it perfect to use during the day to protect
+              skin.
+            </p>
+            <p>It is a product that respects the marine ecosystem and corals, as it does not contain ingredients that
+              are
+              harmful to the ocean (Octocryl and Methoxycinnamate).</p>
+            <p>Morning Glory Fragrance: Fresh green tea combined with a grapefruit floral scent.</p>
+            <div class="dropdown" style="width: 100%;">
+              <button onclick="myFunction()" class="dropbtn">what's inside</button>
+              <div id="myDropdown" class="dropdown-content">
+                <ul>
+                  <li>Hyaluronic Acid:</li>
+                  <p>The quintessential moisturizing active for its water retention capacity. It keeps skin hydrated,
+                    improves
+                    elasticity, protects it from external damage and prevents transepidermal water loss</p>
+                  <li>Vitamin E:</li>
+                  <p>Delays premature aging while protecting skin from the sun. It also helps regenerate tissues and
+                    treat
+                    scars while hydrating the skin.</p>
+                  <li>Pollustop:</li>
+                  <p>Acts as a shield against micro-particles from pollution, UVA rays and external aggressions for the
+                    skin.
+                  </p>
+                  <li>Prebiotic Complex:</li>
+                  <p>Prebiotics such as Inulin and Fructose feed the skin’s Microbiome to keep it balanced, protecting
+                    the
+                    skin from air pollution and giving it that healthy glow.</p>
+
+                </ul>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+
+          <div id="prod_Benefit">
+            <a href="">Benefits</a>
+            <br>
+
+            <br><br><br>
+
+            <hr>
+            <div class="myDropdown">
+              <!-- <button class=".dropbtn">a</button> -->
+              <p>How to use</p>
+              <div class="dropdown-content">
+                <p>Massage into clean skin each morning before make-up. For external use only. Avoid contact with eyes.
+                  Keep
+                  out of reach of children.</p>
+              </div>
+
+            </div>
+            <hr>
+            <div class="dropdown">
+              <p>Ingredients</p>
+              <div class="dropdown-content">
+                <p>Aqua(Water), Dicaprylyl Carbonate,Ethylhexyl Salicylate, Diethylamino Hydroxybenzoyl Hexyl Benzoate
+                  Phenylbenzimidazole Sulfonic Acid, Butylene Glycol, Ethylhexyl Triazone,Bis-Ethylhexyloxyphenol
+                  Methoxyphenyl Triazine Tromethamine, Sodium Stearoyl Lactylate, Cetearyl Alcohol, Phenylpropanol,
+                  Tocopheryl
+                  Acetate, Glyceryl Dibehenate, Glyceryl Stearate, Jojoba Esters, Potassium Cetyl Phosphate, Inulin,
+                  1,2-Hexanediol, Tribehenin, Parfum(Fragrance), Ethylhexylglycerin, Helianthus annuus (Sunflower) Seed
+                  Wax
+                  Sodium Stearoyl Glutamate, Glyceryl Behenate, Diutan Gum (Sphingomonas Ferment Extract) Sodium
+                  Chloride,
+                  Fructose, Limonene, Citric Acid, Polyglycerin-3, Linalool, Tocopherol, Coumarin.</p>
+
+              </div>
+            </div>
+            <hr>
+            <div class="dropdown">
+              <p>Shipping & Payment</p>
+              <div class="dropdown-content">
+                <p>Free European delivery available for orders over 35€.
+                  Peninsular Spain & Portugal shipment cost: 200 ₹.
+                  1-3 days for delivery.
+                  Zone 1 shipment cost: 350 ₹. 2-5 days for delivery.
+                  Zone 2 shipment cost: 900 ₹. 2-5 days for delivery.
+                  Zone 3 shipment cost: 1900 ₹. 2-5 days for delivery
+                  UK shipment cost: 450 ₹ 2-5 days for delivery
+
+                  We accept credit card (Visa, Mastercard, Maestro, American Express), PayPal, iDEAL, Amazon Pay,
+                  Bancontact,
+                  Apple Pay & Google Pay.</a>
+                </p>
+              </div>
+            </div>
+            <br>
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="additional">
+    <div>
+      <img
+        src="https://haanready.com/cdn/shop/files/icono_Clean_Ingredients_ab575a70-70ad-45da-9609-55162465da54@2x.png?v=1678714876"
+        alt="">
+      <p>73% Natural <br>Origin</p>
+    </div>
+    <div>
+      <img
+        src="https://haanready.com/cdn/shop/files/0004_SinTextoNegro__HydraluronicAcid_7dda5c9a-9cb0-4996-abbf-441f6e61c29f@2x.jpg?v=1678360567"
+        alt="">
+      <p>Hyaluronic Acid</p>
+    </div>
+    <div>
+      <img src="https://haanready.com/cdn/shop/files/10_2022_NegroSinTexto_Refillable_copia@2x.png?v=1678873665" alt="">
+      <p>Reef Friendly
+
+      </p>
+    </div>
+    <div>
+      <img
+        src="https://haanready.com/cdn/shop/files/travel-friendly_2x_4be343fa-3fb4-49d6-8d67-7cb84eeb2835@2x.png?v=1678714904"
+        alt="">
+      <p>Travel Friendly</p>
+    </div>
+  </div>
+  <div id="glory">
+    <div id="left">
+      <h3>DAILY MOODS
+      </h3>
+      <h1>Morning Glory</h1>
+      <h3>Fresh green tea combined with a grapefruit <br>floral scent.</h3>
+    </div>
+    <div id="right">
+      <img
+        src="https://haanready.com/cdn/shop/files/Morning_Glory_fe14a804-f102-4a26-a73c-998e2db2eadf.jpg?v=1678270874"
+        alt="">
+    </div>
+  </div>
+  <br>
+  <div id="like">
+    <h3>You may also like</h3>
+    <div id="item">
+      <div>
+        <a href=""><img
+            src="https://haanready.com/cdn/shop/files/0001_SPF_lanyardpocket2_b9cf66f5-4ed2-477f-9ad0-7c796504ece5_1024x1024@2x.jpg?v=1682611849"
+            alt=""></a>
+        <a href="">
+          <h3>Case & Lanyard + Face cream SPF </h3>
+        </a>
+        <a href="">
+          <h3>1990 ₹</h3>
+        </a>
+        <button class="add-to-cart-button">Add to cart</button>
+
+      </div>
+      <div>
+        <a href=""><img src="https://haanready.com/cdn/shop/files/0000_SPF_lanyardsolo_1.jpg?v=1687161108" alt=""></a>
+        <a href="">
+          <h3>Case & Lanyard + Face cream SPF </h3>
+        </a>
+        <a href="">
+          <h3>1990 ₹</h3>
+        </a>
+        <button class="add-to-cart-button">Add to cart</button>
+
+      </div>
+      <div>
+        <a style="position: relative;" href=""><img
+            src="https://haanready.com/cdn/shop/files/0001_SPF_lanyardpocket2_b9cf66f5-4ed2-477f-9ad0-7c796504ece5_1024x1024@2x.jpg?v=1682611849"
+            alt=""></a>
+        <a href="">
+          <h3>Case & Lanyard + Face cream SPF </h3>
+        </a>
+        <a href="">
+          <h3>1990 ₹</h3>
+        </a>
+        <button class="add-to-cart-button">Add to cart</button>
+
+      </div>
+      <div>
+        <a href=""><img
+            src="https://haanready.com/cdn/shop/files/0001_SPF_lanyardpocket2_b9cf66f5-4ed2-477f-9ad0-7c796504ece5_1024x1024@2x.jpg?v=1682611849"
+            alt=""></a>
+        <a href="">
+          <h3>Case & Lanyard + Face cream SPF </h3>
+        </a>
+        <a href="">
+          <h3>1990 ₹</h3>
+        </a>
+        <button class="add-to-cart-button">Add to cart</button>
+
+      </div>
+
+    </div>
+  </div>
+  <br><br>
+  <div id="comment">
+    <div style="display: flex; justify-content: space-evenly; margin-left: 50%;">
+      <div>
+        <h1 style="color: black; font-weight: bolder;">4.8</h1>
+        <h1 style="color: black; font-weight: bolder;">★★★☆☆</h1>
+        <p>Based on 4 reviews</p>
+      </div>
+      <a href="">
+        <p>Ask a question</p>
+      </a>
+      <a href="">
+        <p>Add a review</p>
+      </a>
+    </div>
+  </div>
+  <!-- footer -->
+  <hr>
+  <div class="bottom_section">
+    <footer class="footer">
+      <div class="footer-categories">
+        <div class="footer-parts">
+          <div class="footer-catalog">
+            <h2>Catalog</h2>
+            <p>Best Seller</p>
+            <p>Hand Sanitizer</p>
+            <p>Hand Cream</p>
+            <p>Hand Soap</p>
+            <p>Toothpaste</p>
+            <p>Refills</p>
+            <p>Combos</p>
+          </div>
+          <div class="customer-info">
+            <h2>Customer Info</h2>
+            <p>About us & our purpose</p>
+            <p>Stocklist</p>
+            <p>Journal</p>
+            <p>FAQS</p>
+            <p>Contact</p>
+            <p>For Business</p>
+          </div>
+          <div class="legal-pages">
+            <h2>Legal Pages</h2>
+            <p>Deliveries & Returns</p>
+            <p>Terms & Conditions</p>
+            <p>Refund Policy</p>
+            <p>Privacy Policy</p>
+          </div>
+        </div>
+        <div class="footer-right-part">
+          <h2 class="footer-right-part-header">Sign up for updates</h2>
+          <div class="signup">
+            <input type="text" placeholder="Email address" />
+            <button class="arrow-button">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <div class="social-media">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+          </div>
+        </div>
+      </div>
+      <p class="footer-p">(C) 2023 All right reserved</p>
+    </footer>
+  </div>
+</body>
+
+</html>
+<script type="text/javascript">
+  function incrementValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if (value < 10) {
+      value++;
+      document.getElementById('number').value = value;
+    }
+  }
+  function decrementValue() {
+    var value = parseInt(document.getElementById('number').value, 10);
+    value = isNaN(value) ? 0 : value;
+    if (value > 1) {
+      value--;
+      document.getElementById('number').value = value;
+    }
+
+  }
+</script>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css "
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/checkout.css" />
+    
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+          <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+          <ul class="nav-menu">
+              <li class="nav-items">
+                  <a href="#" class="nav-links"><i class="fa-solid fa-bars"></i></a>
+              </li>
+              <li class="nav-items">
+                  <a href="#bestseller" class="nav-links">Best Sellers</a>
+              </li>
+              <li class="nav-items">
+                  <a href="#" class="nav-links">Hand Sanitizer</a>
+              </li>
+              <li class="nav-items">
+                  <a href="#" class="nav-links">Hand Cream</a>
+              </li>
+              <li class="nav-items">
+                  <a href="#" class="nav-links">Refills</a>
+              </li>
+              <li class="nav-items"><a href="/index.html">
+                  <img id="logo-image" src="https://cdn.shopify.com/s/files/1/0511/9066/1293/files/logo_han.png?v=1651046048" alt="" />
+                </a></li>
+              <li class="nav-items">
+                  <a href="#" class="nav-links">Toothpaste</a>
+              </li>
+              <li class="nav-items">
+                  <a href="#" class="nav-links">Hand Soap</a>
+              </li>
+              <li class="nav-items">
+                  <a href="#" class="nav-links">Combos</a>
+              </li>
+          </ul>
+
+          <a class='nav-links logini' href='#'><i class="fa-regular fa-user"></i></a>
+          <a class='nav-links' href='/cartpage/cartpage2/Hand-Sanitizer-website/cart.html'><i class="fa-solid fa-bag-shopping"></i></a>
+      </nav>
+  </header>
+    <div id="container">
+      <form action="">
+        <div id="parent">
+          <div id="addressdetail">
+            <div class="heding">
+              <h2>
+                <i class="fa-regular fa-address-card"></i> CONTACT DETAILS
+              </h2>
+            </div>
+
+            <input id="name" type="text" placeholder="Full Name" />
+            <input id="phoneno" type="text" placeholder="Mobile No" />
+            <div class="heding">
+              <h2><i class="fa-regular fa-address-book"></i> ADDRESS</h2>
+            </div>
+
+            <input
+              id="fulladdress"
+              type="text"
+              placeholder="Full Address(House no,area/street etc.)"
+            />
+            <input id="town" type="text" placeholder="Locality/Town" />
+            <input id="distric" type="text" placeholder="District" />
+            <input id="pincode" type="number" placeholder="Pin Code" />
+            <input id="state" type="text" placeholder="State" />
+          </div>
+          <div id="paymentdetails">
+            <div class="heding" style="height: 15%;">
+              <h2><i class="fa-solid fa-wallet "></i>  PAYMENT</h2>
+            </div>
+            
+            <div>
+              <p>Subtotal</p>
+              <p id="subtotal">₹2000</p>
+            </div>
+            <div>
+              <p>Convenience Fees</p>
+              <p id="convinientfee">₹99</p>
+            </div>
+            <hr />
+            <div>
+              <p>Total</p>
+              <p id="total">₹2020</p>
+            </div>
+            <div>
+              <button id="orderBtn" ><h2>Place Order</h2></button>
+            </div>
+          </div>
+        </div>
+
+        <p id="error">*Please fill out all the field</p>
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="footer-categories">
+          <div class="footer-parts">
+              <div class="footer-catalog">
+                  <h2>Catalog</h2>
+                  <p>Best Seller</p>
+                  <p>Hand Sanitizer</p>
+                  <p>Hand Cream</p>
+                  <p>Hand Soap</p>
+                  <p>Toothpaste</p>
+                  <p>Refills</p>
+                  <p>Combos</p>
+              </div>
+              <div class="customer-info">
+                  <h2>Customer Info</h2>
+                  <p>About us & our purpose</p>
+                  <p>Stocklist</p>
+                  <p>Journal</p>
+                  <p>FAQS</p>
+                  <p>Contact</p>
+                  <p>For Business</p>
+              </div>
+              <div class="legal-pages">
+                  <h2>Legal Pages</h2>
+                  <p>Deliveries & Returns</p>
+                  <p>Terms & Conditions</p>
+                  <p>Refund Policy</p>
+                  <p>Privacy Policy</p>
+              </div>
+          </div>
+          <div class="footer-right-part">
+              <h2 class="footer-right-part-header">Sign up for updates</h2>
+              <div class="signup">
+                  <input type="text" placeholder="Email address" />
+                  <button class="arrow-button">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+              </div>
+
+              <div class="social-media">
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                  <i class="fa-brands fa-linkedin"></i>
+              </div>
+          </div>
+      </div>
+      <p class="footer-p">(C) 2023 All right reserved</p>
+  </footer>
+  </body>
+</html>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script type="module">
+  // import
+  // import {
+  //   top_navbar,
+  //   middle_navbar,
+  //   bottom_navbar,
+  // } from "../components/navbar.js";
+  // import { getFooter, scrollTop } from "../components/footer.js";
+  // import API from "../components/api.js";
+
+  // window.onload = () => {
+  //   const nav = document.querySelector("#navbar");
+  //   // nav.innerHTML = top_navbar() + middle_navbar() + bottom_navbar();
+  //   nav.innerHTML = top_navbar() + middle_navbar(true);
+  //   const logo = document.querySelector("#logo_click");
+  //   logo.addEventListener("click", () => {
+  //     let url = window.location.pathname;
+  //     if (url !== "/index.html") {
+  //       window.location.assign("/index.html");
+  //     }
+  //   });
+  //   const footer = document.querySelector("#footer");
+  //   footer.innerHTML = getFooter();
+  //   // scroll to top adding
+  //   const scrollAdd = scrollTop();
+  //   scrollAdd(); // calling this will add scroll to top funcion
+
+  //   const item_cart = document.querySelector("#item_count_cart");
+  //   let cartItems = localStorage.getItem("cart-total-items") || 0;
+  //   if (!(cartItems == 0 || cartItems == null)) {
+  //     item_cart.textContent = cartItems;
+  //     item_cart.style.display = "flex";
+  //   }
+  // };
+
+  //payment section
+
+
+    let totalAmount = localStorage.getItem("Total_Amount");
+    console.log(totalAmount);
+    let pay_data = document.getElementById("convinientfee").innerText=99;
+    let total = document.getElementById("total").innerText=totalAmount;
+    let subtotal = document.getElementById("subtotal").innerText=totalAmount;
+
+  var options = {
+    key: "rzp_test_y0dj0ip5NJmJJs", // Enter the Key ID generated from the Dashboard
+    amount: total*100,
+    currency: "INR",
+    description: "Auto Part",
+    image:
+      "https://media.istockphoto.com/id/1034249292/photo/set-of-car-parts-isolated-on-white-background-3d.jpg?s=612x612&w=0&k=20&c=BwXl3LzQau4v40nl9INYToE0mC1SYDA4gBkylspbYis=",
+    prefill: {
+      email: "testpayment@autopart.com",
+      contact: +919900000000,
+    },
+    handler: function (response) {
+      console.log(response);
+      localStorage.setItem("txn_id", response.razorpay_payment_id);
+      location.href = "./confirmation.html";
+    },
+  };
+  var rzp1 = new Razorpay(options);
+  document.getElementById("orderBtn").onclick = function (e) {
+    let name = document.querySelector("#name").value;
+    let phoneno = document.querySelector("#phoneno").value;
+    let address = document.querySelector("#fulladdress").value;
+    let town = document.querySelector("#town").value;
+    let distric = document.querySelector("#distric").value;
+    let pincode = document.querySelector("#pincode").value;
+    let state = document.querySelector("#state").value;
+
+    if (name && phoneno && address && town && distric && pincode && state) {
+      rzp1.open();
+      e.preventDefault();
+      document.querySelector("#error").style.display = "none";
+      savedata();
+    } else {
+      e.preventDefault();
+      document.querySelector("#error").style.display = "block";
+    }
+  };
+
+  // async function postdata() {
+  //   // let name = document.querySelector("#name").value;
+  //   // let phoneno = document.querySelector("#phoneno").value;
+  //   // let address = document.querySelector("#fulladdress").value;
+  //   // let town = document.querySelector("#town").value;
+  //   // let distric = document.querySelector("#distric").value;
+  //   // let pincode = document.querySelector("#pincode").value;
+  //   // let state = document.querySelector("#state").value;
+    // let obj = {
+    //   "fullname": null,
+    //   "mobile_no": null,
+    //   "full_address": null,
+    //   "locality": null,
+    //   "district": null,
+    //   "pin_code": null,
+    //   "state": null,
+    // };
+  //   try {
+  //     let response = await fetch(`https://successful-ruby-eel.cyclic.cloud/address`, {
+  //       method: "POST",
+  //       body: JSON.stringify(obj),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
+  //     let data=await response.json();
+
+  //     console.log(data);
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+  // postdata()
+  async function savedata() {
+    let name = document.querySelector("#name").value;
+    let phoneno = document.querySelector("#phoneno").value;
+    let address = document.querySelector("#fulladdress").value;
+    let town = document.querySelector("#town").value;
+    let distric = document.querySelector("#distric").value;
+    let pincode = document.querySelector("#pincode").value;
+    let state = document.querySelector("#state").value;
+    let obj = {
+      fullname: name,
+      mobile_no: phoneno,
+      full_address: address,
+      locality: town,
+      district: distric,
+      pin_code: pincode,
+      state: state,
+    };
+    try {
+      let response = await fetch(`https://gifted-spacesuit-mite.cyclic.cloud/address/1`, {
+        method: "PATCH",
+        body: JSON.stringify(obj),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      let data=await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+</script>

@@ -1,0 +1,26 @@
+{
+  "name": "hand-sanitizer",
+  "version": "1.0.0",
+  "description": "<h2>A collaborative project from Masai school.</h2>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhaAakri/Hand-Sanitizer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhaAakri/Hand-Sanitizer/issues"
+  },
+  "homepage": "https://github.com/JhaAakri/Hand-Sanitizer#readme",
+  "dependencies": {
+    "json": "^11.0.0",
+    "json-server": "^0.17.3",
+    "server": "^1.0.38"
+  }
+}

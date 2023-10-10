@@ -1,0 +1,73 @@
+/* Footer part */
+.footer {
+    border-top: 1px solid black;
+    margin-top: 50px;
+    height: 390px;
+  }
+  
+  .signup {
+    display: flex;
+    width: 250px;
+    margin-left: 180px;
+  }
+  
+  .footer-right-part-header {
+    margin-left: 178px;
+    margin-bottom: 9px;
+  }
+  
+  .signup input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+  }
+  
+  .signup button {
+    padding: 10px 15px;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .signup button i {
+    font-size: 14px;
+  }
+  
+  .social-media {
+    margin-left: 180px;
+    margin-top: 10px;
+  }
+  
+  .social-media i {
+    margin-right: 12px;
+    font-size: 30px;
+  }
+  
+  .footer-parts {
+    display: flex;
+    gap: 90px;
+    margin-left: 210px;
+    line-height: 25px;
+  }
+  
+  .footer-parts h2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .footer-categories {
+    display: flex;
+    gap: 20px;
+    margin-top: 59px;
+  }
+  
+  .footer-p {
+    margin-top: 39px;
+    text-align: center;
+  }
+
+
+  
